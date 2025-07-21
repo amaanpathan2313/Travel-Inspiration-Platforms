@@ -6,6 +6,7 @@ import Gallery from "./components/Gallery"
 import Details from "./components/Details"
 import SignUp from "./components/SignUp"
 import Login from "./components/Login"
+import PersonalData from "./components/PersonalData"
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/details/:id' element={<Details/>} />
         <Route path='/sign-up' element={<SignUp/>} />
         <Route path='/login' element={<Login/>} />
+        <Route path='/personal' element={<PersonalData/>} />
       </Routes>
       <Footer/>
 

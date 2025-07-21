@@ -48,6 +48,13 @@
    padding: 10px;
  }
 
+ nav .btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+ }
+
  nav a:hover {
    color: black;
    /* border: 1px solid gray; */
@@ -68,6 +75,7 @@
    border-radius: 10px;
    background-color: #3685FB;
    color: white;
+  
  }
 
  .btn a:hover {

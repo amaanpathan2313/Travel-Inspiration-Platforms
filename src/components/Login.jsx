@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { authUser } from "../context/AuthContext";
 
 
 function Login(){
 
+    const {loginUser, msg, errorMsg } = useContext(authUser);
+    const navigate = useNavigate()
+
     const [obj, setObj] = useState({
-        name: "",
         email: "",
         password: "",
     })
@@ -17,19 +22,28 @@ function Login(){
     function handelSubmit(e) {
         e.preventDefault();
 
-        if(!obj.name || !obj.email || !obj.password){
+        if(!obj.email || !obj.password){
             alert("All fields are mandatory !");
             return;
         }
 
         console.log(obj);
 
+        loginUser(obj.email, obj.password)
+
         setObj({
-            name: "",
             email: "",
             password: "",
         })
-    }
+    };
+
+    useEffect(() => {
+        if (msg) {
+            localStorage.setItem('user', JSON.stringify(msg.email))
+            navigate('/gallery');
+        }
+    }, [msg]);
+    
 
     return (
         <>
@@ -51,10 +65,11 @@ function Login(){
 
 
                 }}>
-                    <input type="text" placeholder="Enter  Name" name="name" value={obj.name} onChange={onChange} />
+                    
                     <input type="email" placeholder="Enter Email-id" name="email" value={obj.email} onChange={onChange} />
                     <input type="text" placeholder="Enter Password" name="password" value={obj.password} onChange={onChange} />
                     <button>Login</button>
+                    {errorMsg && <p style={{ fontSize: '10px', color: 'red' }}>{errorMsg}</p>}
                 </form>
             </div>
         </>
