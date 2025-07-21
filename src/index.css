@@ -1,0 +1,447 @@
+ * {
+   padding: 0;
+   margin: 0;
+   font-family: sans-serif;
+ }
+
+ body {
+   background-color: #F9FCFE;
+ }
+
+
+
+ /* Nav Bar */
+
+ nav {
+   color: white;
+   border-radius: 10px;
+   background: #f2dce4;
+   background: radial-gradient(circle, rgba(242, 220, 228, 1) 0%, rgba(148, 187, 233, 1) 100%);
+   border: 2px solid gray;
+   padding: 10px;
+   margin: 10px;
+   display: flex;
+   justify-content: space-between;
+   cursor: pointer;
+   align-items: center;
+
+
+ }
+
+ nav h2:hover{
+  color: white;
+ }
+
+ nav .a {
+   /* border: 2px solid black; */
+   width: 25vw;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ nav a {
+   /* color: rgb(16, 16, 16); */
+   color: white;
+   text-decoration: none;
+   font-weight: 520;
+   padding: 10px;
+ }
+
+ nav a:hover {
+   color: black;
+   /* border: 1px solid gray; */
+   border-radius: 10px;
+   /* background-color: #87aee8; */
+ }
+
+ nav .btn {
+   /* border: 2px solid black; */
+   width: 15vw;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .btn a {
+   padding: 10px 15px;
+   /* margin: 10px; */
+   border-radius: 10px;
+   background-color: #3685FB;
+   color: white;
+ }
+
+ .btn a:hover {
+   color: white;
+   background-color: #4992ff;
+
+ }
+
+ /* Home  */
+
+
+
+ .section1 {
+   /* border: 2px solid black; */
+   display: flex;
+   height: 90vh;
+ }
+
+ .img-box {
+   border-radius: 10px;
+   /* border: 2px solid black; */
+   width: 50vw;
+
+ }
+
+ .img-box img {
+   /* width: 70vh; */
+   border: 10px solid white;
+   border-radius: 10px;
+   width: 20%;
+
+ }
+
+ .img1 {
+   border-radius: 10px;
+   overflow: hidden;
+   width: 100%;
+   position: absolute;
+   top: 20vh;
+   left: 10vw;
+ }
+
+ .img2 {
+   height: 60vh;
+   width: 30vw;
+   position: absolute;
+   top: 55vh;
+   left: 25vw;
+
+ }
+
+ .txt-box {
+   margin-left: 5vw;
+   width: 40vw;
+   /* border: 2px solid black; */
+   display: flex;
+   justify-content: center;
+   /* align-items: center; */
+   flex-direction: column;
+
+
+ }
+
+ .section2 {
+   /* border: 2px solid black; */
+   margin-top: 25vh;
+   padding: 20px;
+ }
+
+ .section2 h1 {
+   padding: 10px;
+   margin: 10px;
+   margin-left: 20vh;
+
+ }
+
+ .section2 p {
+   padding: 10px;
+   margin: 10px;
+   width: 35vw;
+   margin-left: 20vh;
+
+   /* border: 2px solid rgb(154, 44, 44); */
+ }
+
+
+ /* .card-container {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 10px;
+ }
+
+ .card-container div {
+   height: 60vh;
+   width: 20%;
+   border-radius: 20px;
+    overflow: hidden;
+ }
+
+ .card-container div img {
+   width: 100%;
+ }
+
+
+ .card-container div:hover img {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+} */
+
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.card {
+  position: relative;
+  height: 60vh;
+  width: 20%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+/* Blur image on hover */
+.card:hover img {
+  filter: blur(5px);
+}
+
+/* Text over image */
+.card-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+  z-index: 2;
+  pointer-events: none; /* So hover still works on image */
+}
+
+/* Optional background effect */
+.card:hover {
+  background-color: #f2dce4;
+  z-index: 11;
+}
+
+
+                                    /* section  3 */
+
+
+.section3{
+  /* border: 2px solid black; */
+  height: 120vh;
+}
+
+.section3 h1{
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+
+
+.g-box{
+            
+  margin: auto;
+  width: 90vw;
+  height: 50vh;
+  gap: 26px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template: "q1 q2 q3"
+                 "q4 q5 q3"
+                 "q4 q6 q7";
+}
+
+.g-box>div:nth-child(1){
+  height: 33vh;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  grid-area: q1;
+  /* margin: 10px; */
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+.g-box>div:nth-child(2){
+  height: 33vh;
+  background-color: rgb(127, 100, 65);
+  border-radius: 15px;
+  /* margin: 10px; */
+  overflow: hidden;
+ 
+  grid-area: q2;
+}
+.g-box>div:nth-child(3){
+  height: 66vh;
+  background-color: rgb(112, 175, 17);
+  border-radius: 15px;
+  /* margin: 10px; */
+  overflow: hidden;
+  
+  grid-area: q3;
+}
+.g-box>div:nth-child(4){
+  height: 66vh;
+  background-color: rgb(42, 113, 91);
+  border-radius: 15px;
+  /* margin: 10px; */
+  overflow: hidden;
+  
+  grid-area: q4;
+}
+.g-box>div:nth-child(5){
+  height: 33vh;
+  background-color: rgb(42, 113, 91);
+  border-radius: 15px;
+  grid-area: q5;
+  /* margin: 10px; */
+  overflow: hidden;
+}
+.g-box>div:nth-child(6){
+  height: 33vh;
+  background-color: rgb(42, 113, 91);
+  border-radius: 15px;
+  grid-area: q6;
+  /* margin: 10px; */
+  overflow: hidden;
+}
+.g-box>div:nth-child(7){
+  height: 33vh;
+  background-color: rgb(42, 113, 91);
+  border-radius: 15px;
+  grid-area: q7;
+  /* margin: 10px; */
+  overflow: hidden;
+}
+ 
+footer{
+  display: flex;
+  cursor: pointer;
+}
+
+.fo-a a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.9vh;
+}
+
+.fo-a a:hover{
+ color: #3678CA;
+  
+}
+.b :hover{
+ color: #3678CA;
+  
+}
+
+
+.g-container {
+  /* border: 2px solid black; */
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.g-card {
+
+  text-decoration: none;
+  /* border: 2px solid black; */
+  min-width: 300px;
+  height: 70vh;
+  width: 20vw;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevent shrinking in nowrap container */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.g-card a{
+  color: black;
+  padding: 5px;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+}
+
+.g-card:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;}
+
+.g-card a:hover{
+  border-radius: 10px;
+  background-color: #3678CA;
+  color: white;
+}
+
+.g-card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+ 
+.truncate {
+  height: 100px; /* Fixed width to trigger overflow */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.d-container{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-r{
+  /* border: 2px solid black; */
+}
+
+.r-con{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  padding: 20px;
+
+}
+
+
+input, button{
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+}
+
+button{
+  background-color: #3678CA;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+button:hover{
+  background-color: #3685FB;
+}
+button:active{
+  background-color: #4992ff;
+}
