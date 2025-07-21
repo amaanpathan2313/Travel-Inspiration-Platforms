@@ -15,11 +15,7 @@ Database: 1.  [https://moviedatabase-7ddef-default-rtdb.asia-southeast1.firebase
 ## Directory Structure
 ```
 travel-inspiration-platform/
-├─ backend/
-│  ├─ controllers/
-│  ├─ models/
-│  ├─ routes/
-│  └─ ...
+
 ├─ frontend/
 │  ├─ src/
 │  ├─ components/
