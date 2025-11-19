@@ -32,19 +32,19 @@ It solves the challenge of overwhelming travel choices by providing personalized
 ## **🚀 Screenshots **
 
 * Index page
-![Index_page](/src/assets/index_page.png);
+![Index_page](/src/assets/index_page.png)
 
 * Login Page
-![Login_page](/src/assets/login_page.png);
+![Login_page](/src/assets/login_page.png)
 
 * Sign-up Page
-![Sign-up_page](/src/assets/signup_page.png);
+![Sign-up_page](/src/assets/signup_page.png)
 
 * Destination Page
-![Destination_page](/src/assets/all_destinations.png);
+![Destination_page](/src/assets/all_destinations.png)
 
 * BucketList Page
-![BucketList_page](/src/assets/my_bucket_list.png);
+![BucketList_page](/src/assets/my_bucket_list.png)
 
 
 
