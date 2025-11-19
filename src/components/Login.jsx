@@ -27,7 +27,7 @@ function Login(){
             return;
         }
 
-        console.log(obj);
+        // console.log(obj);
 
         loginUser(obj.email, obj.password)
 
@@ -60,14 +60,13 @@ function Login(){
                     gap: '10px',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    padding : '20px',
                     borderRadius : '10px',
 
 
                 }}>
                     
                     <input type="email" placeholder="Enter Email-id" name="email" value={obj.email} onChange={onChange} />
-                    <input type="text" placeholder="Enter Password" name="password" value={obj.password} onChange={onChange} />
+                    <input type="password" placeholder="Enter Password" name="password" value={obj.password} onChange={onChange} />
                     <button>Login</button>
                     {errorMsg && <p style={{ fontSize: '10px', color: 'red' }}>{errorMsg}</p>}
                 </form>

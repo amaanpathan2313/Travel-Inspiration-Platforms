@@ -79,7 +79,7 @@ function AddToListContext({ children }) {
       for (let key in obj) {
         arr.push({ id: key, ...obj[key] });
       }
-console.log(arr)
+// console.log(arr)
       setData(arr); // ✅ Save parsed data
     } catch (error) {
       console.error("Error fetching user-specific data:", error);

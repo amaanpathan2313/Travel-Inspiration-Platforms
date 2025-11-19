@@ -7,11 +7,12 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } f
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export const authUser = createContext()
+export const authUser = createContext();
 
 
 function AuthContext({ children }) {
     const [msg, setMsg] = useState(null)
+    // const [isUser, setIsUser] = useState(null)
     const [errorMsg, setErrorMsg] = useState(null);
     const navigate = useNavigate()
 
@@ -23,7 +24,7 @@ function AuthContext({ children }) {
                 body: JSON.stringify({ name : name, email : email })
             })
         } catch (error) {
-            console.log("Error while add user name")
+            console.log("Error while add user name", error.message)
         }
     }
 
@@ -46,6 +47,7 @@ function AuthContext({ children }) {
             let userCredential = await signInWithEmailAndPassword(auth, email, password);
             // console.log(userCredential.user)
             setMsg(userCredential.user);
+            console.log(userCredential.user)
             return userCredential.user;
 
         } catch (error) {

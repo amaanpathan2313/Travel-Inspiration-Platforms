@@ -14,7 +14,7 @@ function Home() {
                 <div className='txt-box'>
                     <h4 style={{ color: '#3685FB', marginLeft: '5vw' }}> Explore Now</h4>
 
-                    <h1 style={{ marginLeft: '5vw', marginLeft: '60px', margin: '20px', fontSize: '7vh' }}>The Smiling 😊, <br />
+                    <h1 style={{ marginLeft: '5vw', margin: '20px', fontSize: '7vh' }}>The Smiling 😊, <br />
                         agent for travel</h1>
 
                     <p style={{ width: '35vw', marginLeft: '30px', fontWeight: '540', lineHeight: '3vh' }}> <span> "The world is full of wonders — go find yours. Every journey begins with a single step, and ends with unforgettable memories. Travel not just to see, but to feel alive." </span> </p>

@@ -57,7 +57,6 @@ function SignUp() {
                     height: '30vh',
                     flexDirection: 'column',
                     margin: 'auto',
-                    padding: '10px',
                     gap: '10px',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -66,7 +65,7 @@ function SignUp() {
                 }}>
                     <input type="text" placeholder="Enter  Name" name="name" value={obj.name} onChange={onChange} />
                     <input type="email" placeholder="Enter Email-id" name="email" value={obj.email} onChange={onChange} />
-                    <input type="text" placeholder="Enter Password" name="password" value={obj.password} onChange={onChange} />
+                    <input type="password" placeholder="Enter Password" name="password" value={obj.password} onChange={onChange} />
                     <button>Sign Up</button>
                     {errorMsg && <p style={{ fontSize: '10px', color: 'red' }}>{errorMsg}</p>}
                 </form>
